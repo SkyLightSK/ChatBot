@@ -1,0 +1,37 @@
+<div class="chat-container">
+    <div class="chat-wrapper">
+        <div class="chat-header">
+            <div *ngIf="activeContact" class="chat-contact">
+                <img src="{{activeContact.avatar}}" alt="Contact avatar">
+                <div class="chat-contact-description">
+                    <h2>{{activeContact.name}}</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ducimus 
+                    quidem accusamus 
+                    sit commodi, quaerat officiis! Ullam earum qui, aliquid quis, tenetur est illo 
+                    deleniti aut nisi natus corrupti ipsum!</div>
+
+            </div>
+        </div>
+        <div #scroll class="chat-content">
+            <div class="messages">
+                <app-message
+                    *ngFor="let message of messages"
+                    [message]="message"
+                ></app-message>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <div class="text-message">
+                <input
+                  type="text"
+                  placeholder="Start chatting!"
+                  (keyup.enter)="send()"
+                  [(ngModel)]="text"
+                />
+                <button mat-button class="send-message" (click)="send()">
+                    Send message
+                </button>
+              </div>
+        </div>
+    </div>               
+</div>

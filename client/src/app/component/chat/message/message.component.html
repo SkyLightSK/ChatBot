@@ -1,0 +1,15 @@
+<div class="message-box {{ isClientMsg() ? 'client' : '' }}">
+    <div class="message-header">
+        <span class="message-name">
+            {{message.sender.name}}
+        </span>
+        <span class="flex-spacer"></span>
+        <span class="message-time">
+            {{formatAMPM(message.createdAt)}}
+        </span>
+    </div>
+    <div class="message-content">
+      {{message.text}}
+    </div>
+    <div class="message-bubble"></div>
+</div>

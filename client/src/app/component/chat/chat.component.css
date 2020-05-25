@@ -1,0 +1,74 @@
+.chat-header {
+    height: 170px;
+    background-color: #becbd9;
+}
+
+.chat-contact {
+    display: flex;
+}
+
+.chat-header .chat-contact img {
+    width: 169px;
+    height: 169px;
+}
+
+.chat-header .chat-contact .chat-contact-description {
+    max-width: 760px;
+    padding: 20px
+}
+
+.chat-content {
+    height: 380px;
+    margin: 20px 10px 0px 10px;
+    overflow-y: scroll;
+}
+
+.chat-footer {
+    padding: 19px 0px;
+}
+
+.text-message input {
+    min-width: 633px;
+    height: 38px;
+    box-shadow: inset 0px 1px 1px 0 rgba(0, 1, 1, 0.15);
+    border: solid 1px #cccccc;
+    background-color: #ffffff;
+    padding: 0px 13px;
+    border-radius: 4px;
+    margin: 0px 10px;
+
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #999999;
+}
+
+.send-message {
+    min-width: 165px;
+    height: 38px;
+    border: solid 1px #357ebc;
+    background-color: #428bca;
+
+    font-size: 13px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: #becbd9;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #9daab9;
+}

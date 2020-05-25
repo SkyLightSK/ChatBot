@@ -1,0 +1,44 @@
+<mat-tab-group animationDuration="0ms" fitInkBarToContent="false">
+
+    <mat-tab label="Online">
+        <mat-selection-list [multiple]="false">
+            <mat-list-option *ngFor="let user of usersConSub | async" (click)="selectContact(user)">
+                <ng-container
+                    [ngTemplateOutlet]="userItem"
+                    [ngTemplateOutletContext]="{user:user}">
+                </ng-container>
+            </mat-list-option>
+        </mat-selection-list>
+    </mat-tab>
+
+    <mat-tab label="All">
+        <mat-selection-list [multiple]="false">
+            <mat-list-option *ngFor="let user of usersSub | async" (click)="selectContact(user)">
+                <ng-container
+                    [ngTemplateOutlet]="userItem"
+                    [ngTemplateOutletContext]="{user:user}">
+                </ng-container>
+            </mat-list-option>
+        </mat-selection-list>
+    </mat-tab>
+
+</mat-tab-group>
+
+
+<form class="filter-form">
+        <input type="text"
+                placeholder="Search..."
+                aria-label="Number"
+                matInput
+                [formControl]="myControl"
+        >
+</form>
+
+<ng-template #userItem let-user='user'>
+    <div class="img-wrapper {{user.connection || user.type !== 'client' ? 'active' : 'inactive'}}">
+        <img src={{user.avatar}} />
+    </div>
+    <div>
+        <span>{{user.name}}</span>
+    </div>
+</ng-template>
