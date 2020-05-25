@@ -1,0 +1,18 @@
+entity: Users
+items:
+  users0:
+    name: 'Echo Bot'
+    avatar: '{{internet.avatar}}'
+    type: 'bot.echo'
+  users1:
+    name: 'Reverse Bot'
+    avatar: '{{internet.avatar}}'
+    type: 'bot.reverse'
+  users2:
+    name: 'Ignor Bot'
+    avatar: '{{internet.avatar}}'
+    type: 'bot.ignor'
+  users3:
+    name: 'Spam Bot'
+    avatar: '{{internet.avatar}}'
+    type: 'bot.spam'

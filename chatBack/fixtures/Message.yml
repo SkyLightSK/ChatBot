@@ -1,0 +1,4 @@
+entity: Message
+items:
+  message0:
+    text: 'test'
